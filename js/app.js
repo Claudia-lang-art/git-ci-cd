@@ -1,5 +1,10 @@
-const bouton = document.querySelector("#btn")
+const nom = document.querySelector("#nom");
+const age = document.querySelector("#age");
+const buttonSubmit = document.querySelector("#btn");
 
-bouton.addEventListener("click",()=>{
-    alert("bouton clicked")
-})
+buttonSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  alert(`Vous ètes ${nom.value} et vous avez ${age.value}`);
+  nom.value = "";
+  age.value = "";
+});
